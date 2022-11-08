@@ -8,7 +8,7 @@ console.log(process.env.MONGO_URL); // env -> environment variables
 
 const app = express();
 
-const PORT = 4000;
+const PORT = process.env.PORT;
 
 const movies = [
   {
