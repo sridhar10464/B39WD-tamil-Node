@@ -151,7 +151,7 @@ db.orders.aggregate([
 
 db.movies.findOne({
   name:"RRR"
-})
+});
 
 db.movies.updateOne({
   name:"RRR"
