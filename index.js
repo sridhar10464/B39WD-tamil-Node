@@ -1,5 +1,5 @@
 // const express = require("express"); // common js
-import express from 'express'; // "type": "module"
+import express from "express"; // "type": "module"
 import { MongoClient } from "mongodb";
 import moviesRouter from "./routes/movies.route.js";
 import * as dotenv from "dotenv"; 
