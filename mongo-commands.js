@@ -143,10 +143,10 @@ db.orders.aggregate([
   { $match: { status: "urgent" } }
 ])
 
-db.orders.aggregate([
-  { $match: { status: "urgent" } },
-  { $group: { _id: "$productName", totalUrgentQty: {$sum: "$quantity"}}
-]);
+// db.orders.aggregate([
+//   { $match: { status: "urgent" } },
+//   { $group: { _id: "$productName", totalUrgentQty: {$sum: "$quantity"}}
+// ]);
 
 
 db.movies.findOne({
