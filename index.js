@@ -1,8 +1,11 @@
 // const express = require("express"); // common js
 // "type": "module"
 import express from "express"; 
+import cors from 'cors';
+import bcrypt from "bcrypt";
 import { MongoClient } from "mongodb";
 import moviesRouter from "./routes/movies.route.js";
+import usersRouter from "./routes/users.route.js"
 import * as dotenv from "dotenv"; 
 dotenv.config();
 
@@ -22,18 +25,22 @@ console.log("Mongo is connected ✔✔✔")
 // express.json() - middleware (inbuilt) | Converts data to JSON
 // app.use - Intercepts -> applies express.json()
 app.use(express.json());
+app.use(cors()) //3re party middle ware
 
 app.get("/", function (request, response) {
   response.send("🙋‍♂️, 🌏 🎊✨🤩 Today is pretty cool");
 });
 
 app.use("/movies", moviesRouter);
+app.use("/users", usersRouter);
 app.listen(PORT, () => console.log(`The server started in: ${PORT} ✨✨`));
 
 // GET
 // POST
 // DELETE
-// PUT
+// PUT.hash
+
+
 
 export {client};
 
