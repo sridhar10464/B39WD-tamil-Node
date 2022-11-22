@@ -46,7 +46,7 @@ const router = express.Router();
       response.send(result);
     });
     
-    router.delete("/:id", auth, async function(request, response){
+    router.delete("/:id", async function(request, response){
       const {id} = request.params;
     // db.movies.deleteOne({id: "100"})
     
