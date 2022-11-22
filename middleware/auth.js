@@ -11,3 +11,4 @@ export const auth = (request, response, next) => {
     response.status(402).send({error: err.message});
   }
 };
+
